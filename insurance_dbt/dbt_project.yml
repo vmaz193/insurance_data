@@ -31,4 +31,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   insurance_dbt:
+      # Staging Layer: Raw data cleaned and prepared. Materialized as views.
+    staging:
+      +schema: staging
+      +materialized: view
+    
+    # Intermediate Layer: Complex joins and aggregations. Materialized as tables.
+    intermediate:
+      +schema: intermediate
+      +materialized: table
 
+    # Marts Layer: Final, business-facing models. Materialized as tables.
+    marts:
+      +schema: marts
+      +materialized: table

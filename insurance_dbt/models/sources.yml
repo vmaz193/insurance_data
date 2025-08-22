@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: claims
+        description: "Raw claims data from the source system."
+      - name: policies
+        description: "Raw customer and policy data."
+      - name: identity_protection
+        description: "Identity protection alert data for customers."
+      - name: trips
+        description: "Driving behavior data from telematics devices."
