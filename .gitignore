@@ -11,3 +11,6 @@ venv/
 # dbt artifacts
 dbt_project/logs/
 dbt_project/target/
+
+.idea/
+.vscode/
